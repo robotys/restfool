@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RestFool - Rest for the fool like me</title>
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<script src="script.js"></script>
+</head>
+<body>
+
+<div id="menu">
+	<span class="brand">
+		<span class="brand-emoji">
+			&#129313;
+		</span>
+		<span class="menu-text">
+			RESTFool v1.0
+		</span>
+	</span>
+	
+	<div class="options">
+		<select id="choose-option">
+			<option value="list_endpoint">Endpoints</option>
+			<option value="form_endpoint">New Endpoint</option>
+		</select>
+	</div>
+
+	<ul class="endpoints">
+		<li>
+			<span class="endpoint">MPA /endpoint_1</span>
+			<ul class="templates">
+				<li class="template">Template 1</li>
+				<li class="template">Template 2</li>
+			</ul>
+		</li>
+		<li>
+			<span class="endpoint">MPA /endpoint_2</span>
+			<ul class="templates">
+				<li class="template">Template 1</li>
+				<li class="template active">Template 2 &#128679;</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<div id="workspace">
+	<div class="details">
+		<div class="title">
+			&#128296; MPA /endpoint_1 (Template 1)
+		</div>
+
+		<table class="detail-layout">
+			<tbody class="action">
+				<tr>
+					<td colspan="3">
+						<span class="btn btn-save">Save</span>
+						<span class="btn btn-save-as">Save As</span>
+						<span class="btn btn-run">Run</span>
+						<span class="btn btn-toggle-detail-header">Header</span>
+					</td>
+				</tr>
+			</tbody>
+			<tbody class="url-title">
+				<tr>
+					<td colspan="2">URL</td>
+					<td>&nbsp;</td>
+				</tr>
+			</tbody>
+			<tbody class="url">
+				<tr>
+					<td colspan="3"><input type="text" id="url" class="input" style="width: 100%"></td>
+				</tr>
+			</tbody>
+			<tbody class="header-title">
+				<tr>
+					<td colspan="2">Header</td>
+					<td><span class="add-header">+</span></td>
+				</tr>
+			</tbody>
+			<tbody class="headers">
+				<tr>
+					<td>
+						<input type="text" class="input header_key" placeholder="Header 1 Key">
+					</td>
+					<td>
+						<input type="text" class="input header_value" placeholder="Header 1 Value">
+					</td>
+					<td>
+						<span class="remove-header">-</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="text" class="input header_key" placeholder="Header 1 Key">
+					</td>
+					<td>
+						<input type="text" class="input header_value" placeholder="Header 1 Value">
+					</td>
+					<td>
+						<span class="remove-header">-</span>
+					</td>
+				</tr>
+			</tbody>
+			<tbody class="body-title">
+				<tr>
+					<td colspan="2">
+						Body
+						<select id="body-type" class="">
+							<option value="form-post">POST</option>
+							<option value="form-post">GET</option>
+							<option value="json">JSON</option>
+						</select>
+					</td>
+					<td>
+						<span class="add-body">+</span>
+					</td>
+				</tr>
+			</tbody>
+			<tbody class="body-form">
+				<tr>
+					<td>
+						<input type="text" class="input body_key" placeholder="Body 1 Key">
+					</td>
+					<td>
+						<input type="text" class="input body_value" placeholder="Body 1 Value">
+					</td>
+					<td>
+						<span class="remove-body">-</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="text" class="input body_key" placeholder="Body 1 Key">
+					</td>
+					<td>
+						<input type="text" class="input body_value" placeholder="Body 1 Value">
+					</td>
+					<td>
+						<span class="remove-body">-</span>
+					</td>
+				</tr>
+			</tbody>
+			<tbody class="body-json">
+				<tr>
+					<td colspan="2">
+						<textarea id="body-json">[{"json_key":"json_value"}]</textarea>
+					</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+
+		
+	</div>
+
+	<div id="result">
+		<div class="title">
+			&#128640; Response
+			<small style="float: right;">Header</small>
+		</div>
+		<div class="result-header">
+			<label>Header:</label>
+			<div class="header-text">
+HTTP/1.1 307 Temporary Redirect
+Date: Tue, 05 Jan 2021 05:49:41 GMT
+Server: Apache/2.4.35 (Win64) OpenSSL/1.1.1b PHP/7.2.19
+X-Powered-By: PHP/7.2.19
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Set-Cookie: name=value; httpOnly
+Location: https://sendparcel.local/open/login
+Content-Length: 0
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: text/html; charset=UTF-8
+			</div>
+		</div>
+		<div class="result-body">
+			<label>Body:</label>
+			<di class="body-text">
+[{"json_key":"json_value"}]
+			</di>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,220 @@
+body{
+	background: #444;
+	margin: 0px;
+	padding: 0px;
+	font-family: sans-serif;
+	font-size: 10pt;
+	color: #eee;
+}
+
+#menu, #workspace, #screen{
+	height: 100vh;
+	float: left;
+	/*overflow-y: scroll;*/
+	box-sizing: border-box;
+}
+
+#menu{
+	width: 250px;
+	background: #333;
+}
+
+#menu > .brand, .details > .title, #result > .title{
+	background: #222;
+	width: 100%;
+	float: left;
+	padding: 15px;
+	/*font-size: 1.2em;*/
+	box-sizing: border-box;
+}
+
+.options{
+	/*background: #F00;*/
+	float: left;
+	width: 100%;
+	padding: 15px;
+	box-sizing: border-box;
+}
+
+#choose-option{
+	width: 100%;
+	padding: 5px;
+	background: #ccc;
+	/*color: #eee;*/
+	border: none;
+}
+
+.endpoints, .templates{
+	width: 100%;
+	float: left;
+	/*background: #F00;*/
+	margin: 0px;
+	padding: 0px;
+}
+
+.endpoint, .template{
+	width: 100%;
+	display: block;
+	padding: 10px 15px;
+	cursor: pointer;
+}
+
+.template{
+	padding: 10px 25px;
+}
+
+.endpoint:hover, .template:hover, .endpoint.active, .template.active{
+	background: #444;
+}
+
+#workspace{
+	width: calc(100% - 250px);
+	background: #444;
+}
+
+.details{
+	width: 400px;
+	height: 100vh;
+	float: left;
+	box-sizing: border-box;
+	/*background: #F00;*/
+}
+
+.detail-layout{
+	width: 100%;
+	float: left;
+	border-collapse: collapse;
+}
+
+.action td{
+	padding: 15px;
+}
+
+.url-title td{
+	padding: 0px 0px 0px 15px;
+}
+
+.url td{
+	padding: 0 15px;
+}
+
+.header-title td{
+	padding: 15px 15px 0px 15px;
+}
+
+.headers td:first-child{
+	padding: 0px 0px 0px 15px;
+}
+
+.headers td:last-child{
+	padding: 0px 15px 0px 0px;
+}
+
+td{
+	/*background: #F00;*/
+}
+
+.body-title td{
+	padding: 15px 15px 0px 15px;
+
+}
+
+.body-form td:first-child{
+	padding: 0px 0px 0px 15px;
+}
+
+.body-form td:last-child{
+	padding: 0px 15px 0px 0px;
+}
+
+.body-json td{
+	padding: 0px 15px;
+}
+
+#result{
+	width: calc(100% - 400px);
+	float: left;
+	height: 100vh;
+	box-sizing: border-box;
+	background: #eee;
+}
+
+.result-header, .result-body{
+	background: #efefef;
+	font-style: monospace;
+	box-sizing: border;
+	width: 100%;
+	padding: 15px;
+	float: left;
+	color: #444;
+	box-sizing: border-box;
+}
+
+.header-text, .body-text{
+	width: 100%;
+	color: #999;
+	white-space: pre;
+}
+
+.btn{
+	background: #000;
+	display: inline-block;
+	float: left;
+	margin-right: 5px;
+	padding: 6px 10px;
+	cursor: pointer;
+}
+
+.btn-run{
+	float: right;
+	background: #98C;
+}
+
+.btn-toggle-detail-header{
+	float: right;
+}
+
+.input{
+	padding: 6px 10px;
+	box-sizing: border-box;
+	width: 100%;
+	background: #ccc;
+}
+
+#body-json{
+	width: 100%;
+	padding: 6px;
+}
+
+.mb{
+	display: inline-block;
+	float: left;
+	margin-bottom: 15px;
+}
+
+.add-header, .remove-header, .add-body, .remove-body{
+	background: #000;
+	color: #FFF;
+	font-family: monospace;
+	width: 20px;
+	height: 20px;
+	display: block;
+	font-size: 1.5em;
+	font-weight: 800;
+	line-height: 13pt;
+	float: right;
+	text-align: center;
+}
+
+.add-header, .add-body{
+	background: #0C4;
+}
+
+.remove-header, .remove-body{
+	background: #F00;
+}
+
+.header-title, .headers, .result-header, .body-json{
+	display: none;
+}
+
